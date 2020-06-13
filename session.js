@@ -4,7 +4,7 @@ async function example() {
     await driver.get('http://www.google.com');
     await driver.findElement(webdriver.By.name('q')).sendKeys('hello world');
     await driver.findElement({ name: 'q' }).sendKeys(webdriver.Key.ENTER);
-    await driver.findElement({ xpath: '//*[@id="rso"]/div[1]/div[1]/div[1]/div[1]/div/div[1]/div[2]/div/div/div/div[2]/h3/a' }).click();
+    await driver.findElement({ xpath: '//*[@id="rso"]/div[2]/div/div[1]/a/h3' }).click();
     await driver.getTitle().then(function(title){console.log(title);});
 }
 example();
